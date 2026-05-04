@@ -2,24 +2,30 @@
 
 namespace Database\Seeders;
 
-use App\Models\User;
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class DatabaseSeeder extends Seeder
 {
-    use WithoutModelEvents;
-
-    /**
-     * Seed the application's database.
-     */
     public function run(): void
     {
-        // User::factory(10)->create();
-
-        User::factory()->create([
-            'name' => 'Test User',
-            'email' => 'test@example.com',
+        // Vider les tables avant de les remplir (optionnel)
+        DB::statement('SET FOREIGN_KEY_CHECKS=0;');
+        
+        DB::table('doctors')->truncate();
+        DB::table('services')->truncate();
+        DB::table('testimonials')->truncate();
+        DB::table('appointments')->truncate();
+        DB::table('patients')->truncate();
+        
+        DB::statement('SET FOREIGN_KEY_CHECKS=1;');
+        
+        // Lancer les seeders
+        $this->call([
+            DoctorSeeder::class,
+            ServiceSeeder::class,
+            TestimonialSeeder::class,
+            AdminUserSeeder::class,
         ]);
     }
 }

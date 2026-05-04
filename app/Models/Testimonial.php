@@ -1,27 +1,27 @@
 <?php
 
-use Illuminate\Database\Migrations\Migration;
-use Illuminate\Database\Schema\Blueprint;
-use Illuminate\Support\Facades\Schema;
+namespace App\Models;
 
-return new class extends Migration
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
+class Testimonial extends Model
 {
-    public function up(): void
-    {
-        Schema::create('testimonials', function (Blueprint $table) {
-            $table->id();
-            $table->string('patient_name');
-            $table->text('content');
-            $table->integer('rating')->default(5);
-            $table->string('treatment')->nullable();
-            $table->string('photo')->nullable();
-            $table->boolean('is_active')->default(true);
-            $table->timestamps();
-        });
-    }
+    use HasFactory;
 
-    public function down(): void
-    {
-        Schema::dropIfExists('testimonials');
-    }
-};
+    protected $table = 'testimonials';
+
+    protected $fillable = [
+        'patient_name',
+        'content',
+        'rating',
+        'treatment',
+        'photo',
+        'is_active'
+    ];
+
+    protected $casts = [
+        'is_active' => 'boolean',
+        'rating' => 'integer'
+    ];
+}

@@ -5,16 +5,16 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
-class Service extends Model
+class Appointment extends Model
 {
     use HasFactory;
 
     protected $fillable = [
-        'name', 'slug', 'description', 'long_description',
-        'icon', 'image', 'is_active', 'order'
+        'name', 'email', 'phone', 'preferred_date', 'preferred_time',
+        'service', 'message', 'status'
     ];
 
     protected $casts = [
-        'is_active' => 'boolean'
+        'preferred_date' => 'date'
     ];
 }
