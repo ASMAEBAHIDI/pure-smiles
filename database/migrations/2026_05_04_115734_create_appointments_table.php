@@ -20,17 +20,10 @@ return new class extends Migration
             $table->enum('status', ['pending', 'confirmed', 'cancelled', 'completed'])->default('pending');
             $table->text('notes')->nullable();
             $table->timestamps();
-            
-            // Clés étrangères (doivent être ajoutées APRÈS la création des colonnes)
-            $table->foreign('doctor_id')
-                  ->references('id')
-                  ->on('doctors')
-                  ->onDelete('cascade');
-                  
-            $table->foreign('service_id')
-                  ->references('id')
-                  ->on('services')
-                  ->onDelete('cascade');
+
+            // Clés étrangères
+            $table->foreign('doctor_id')->references('id')->on('doctors')->onDelete('cascade');
+            $table->foreign('service_id')->references('id')->on('services')->onDelete('cascade');
         });
     }
 
