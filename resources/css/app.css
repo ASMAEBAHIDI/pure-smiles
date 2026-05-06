@@ -159,3 +159,26 @@ h3,
     color: var(--celestia-600);
     margin-bottom: 0.5rem;
 }
+
+/* Styles pour le thème Bleu Ciel */
+.service-card {
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 35px -10px rgba(102, 126, 234, 0.3) !important;
+}
+
+.testimonial-card {
+    transition: transform 0.3s;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+}
+
+.btn-outline-light:hover {
+    background: white;
+    color: #667eea !important;
+}

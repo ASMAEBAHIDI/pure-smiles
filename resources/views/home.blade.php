@@ -1,47 +1,53 @@
 @extends('layouts.app')
 
 @section('content')
-<!-- Hero Section -->
-<section class="hero-section">
-    <div class="container">
-        <p class="text-uppercase small fw-light tracking-wide">We're a premium orthodontic and aesthetic clinic</p>
+<!-- Hero Section avec image de fond -->
+<section class="hero-section position-relative" style="min-height: 100vh; display: flex; align-items: center; background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.3)), url('{{ asset("images/PURE1.png") }}'); background-size: cover; background-position: center; background-attachment: fixed;">
+    <div class="container text-center text-white position-relative z-1">
+        <p class="text-uppercase small fw-light tracking-wide mb-3" style="letter-spacing: 3px;">
+            Nous sommes une clinique orthodontique et esthétique premium
+        </p>
         <h1 class="display-1 fw-light mb-4">
-            Luxury care <span class="fw-bold">made personal</span>
+            Soins de luxe <span class="fw-bold">personnalisés</span>
         </h1>
-        <p class="lead mb-5">For those who settle for nothing ordinary.</p>
-        <div class="d-flex gap-3 justify-content-center">
-            <a href="{{ route('appointments.create') }}" class="btn btn-primary-celestia">Schedule a visit</a>
-            <a href="{{ route('services') }}" class="btn btn-outline-celestia">Our Services</a>
+        <p class="lead mb-5">Pour ceux qui ne se contentent de rien d'ordinaire.</p>
+        <div class="d-flex gap-3 justify-content-center flex-wrap">
+            <a href="{{ route('appointments.create') }}" class="btn btn-light rounded-pill px-5 py-3 fw-bold" style="background: white; color: #002093; transition: all 0.3s;">
+                Prendre rendez-vous
+            </a>
+            <a href="{{ route('services') }}" class="btn btn-outline-light rounded-pill px-5 py-3 fw-bold" style="border: 2px solid white; transition: all 0.3s;">
+                Nos services
+            </a>
         </div>
     </div>
 </section>
 
 <!-- Soft. Defined Section -->
-<section class="py-5 bg-light">
+<section class="py-5" style="background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);">
     <div class="container">
         <div class="row align-items-center">
             <div class="col-lg-6 mb-4 mb-lg-0">
-                <h2 class="display-3 fw-light">
-                    Soft.<br>
-                    <span class="fw-bold">Defined.</span>
+                <h2 class="display-3 fw-light text-dark">
+                    Doux.<br>
+                    <span class="fw-bold" style="color: #3181d1;">Défini.</span>
                 </h2>
-                <div class="border-bottom border-danger w-25 my-4" style="height: 2px;"></div>
+                <div class="border-bottom my-4" style="width: 80px; height: 3px; background: #3181d1;"></div>
                 <p class="lead text-secondary">
-                    We combine precision engineering with artistic vision to create smiles that are both 
-                    naturally beautiful and structurally perfect.
+                    Nous combinons l'ingénierie de précision avec la vision artistique pour créer des sourires à la fois 
+                    naturellement beaux et structurellement parfaits.
                 </p>
                 <p class="text-secondary">
-                    Our approach goes beyond traditional dentistry — we're architects of confidence, 
-                    sculptors of self-assurance, and partners in your journey to a radiant smile.
+                    Notre approche va au-delà de la dentisterie traditionnelle — nous sommes architectes de confiance, 
+                    sculpteurs d'assurance et partenaires dans votre cheminement vers un sourire radieux.
                 </p>
             </div>
             <div class="col-lg-6">
                 <div class="position-relative">
                     <img src="https://images.unsplash.com/photo-1606811971618-4486d14f3f99?q=80&w=2070" 
-                         alt="Smiling patient" class="img-fluid rounded-4 shadow">
-                    <div class="position-absolute bottom-0 start-0 bg-danger text-white p-3 rounded-4 shadow-lg m-3">
+                         alt="Patiente souriante" class="img-fluid rounded-4 shadow">
+                    <div class="position-absolute bottom-0 start-0 text-white p-3 rounded-4 shadow-lg m-3" style="background: #3181d1;">
                         <div class="h2 fw-bold mb-0">5000+</div>
-                        <small>Smiles Transformed</small>
+                        <small>Sourires transformés</small>
                     </div>
                 </div>
             </div>
@@ -50,40 +56,48 @@
 </section>
 
 <!-- Services Section -->
-<section class="py-5">
+<section class="py-5" style="background: white;">
     <div class="container">
-        <h2 class="section-title">Expert care <span>for every smile</span></h2>
-        <p class="section-subtitle">
-            We offer a full spectrum of treatments – each tailored to elevate your health, confidence, and natural beauty.
+        <h2 class="text-center display-4 fw-light mb-3">Soins experts <span style="color: #3181d1;" class="fw-bold">pour chaque sourire</span></h2>
+        <p class="text-center text-secondary mb-5" style="max-width: 700px; margin: 0 auto 3rem auto;">
+            Nous offrons un éventail complet de traitements – chacun adapté pour élever votre santé, votre confiance et votre beauté naturelle.
         </p>
         
         <div class="row g-4 mt-2">
             <div class="col-md-6 col-lg-3">
-                <div class="service-card">
-                    <div class="service-icon">🦷</div>
-                    <h4>Aesthetic dentistry</h4>
-                    <p class="text-secondary">Veneers, bonding, and smile makeovers</p>
+                <div class="service-card text-center p-4 rounded-4 shadow-sm" style="transition: all 0.3s; background: #f8f9ff;">
+                    <div class="service-icon mb-3">
+                        <span class="display-4">🦷</span>
+                    </div>
+                    <h4 class="h5 fw-bold">Dentisterie esthétique</h4>
+                    <p class="text-secondary small">Facettes, collage et makeovers du sourire</p>
                 </div>
             </div>
             <div class="col-md-6 col-lg-3">
-                <div class="service-card">
-                    <div class="service-icon">📐</div>
-                    <h4>Orthodontics</h4>
-                    <p class="text-secondary">Braces and clear aligners</p>
+                <div class="service-card text-center p-4 rounded-4 shadow-sm" style="transition: all 0.3s; background: #f8f9ff;">
+                    <div class="service-icon mb-3">
+                        <span class="display-4">📐</span>
+                    </div>
+                    <h4 class="h5 fw-bold">Orthodontie</h4>
+                    <p class="text-secondary small">Bagues et aligneurs transparents</p>
                 </div>
             </div>
             <div class="col-md-6 col-lg-3">
-                <div class="service-card">
-                    <div class="service-icon">💎</div>
-                    <h4>Implantology</h4>
-                    <p class="text-secondary">Permanent tooth replacement</p>
+                <div class="service-card text-center p-4 rounded-4 shadow-sm" style="transition: all 0.3s; background: #f8f9ff;">
+                    <div class="service-icon mb-3">
+                        <span class="display-4">💎</span>
+                    </div>
+                    <h4 class="h5 fw-bold">Implantologie</h4>
+                    <p class="text-secondary small">Remplacement permanent des dents</p>
                 </div>
             </div>
             <div class="col-md-6 col-lg-3">
-                <div class="service-card">
-                    <div class="service-icon">✨</div>
-                    <h4>Whitening</h4>
-                    <p class="text-secondary">Professional teeth whitening</p>
+                <div class="service-card text-center p-4 rounded-4 shadow-sm" style="transition: all 0.3s; background: #f8f9ff;">
+                    <div class="service-icon mb-3">
+                        <span class="display-4">✨</span>
+                    </div>
+                    <h4 class="h5 fw-bold">Blanchiment</h4>
+                    <p class="text-secondary small">Blanchiment dentaire professionnel</p>
                 </div>
             </div>
         </div>
@@ -91,87 +105,87 @@
 </section>
 
 <!-- Stats Banner -->
-<section class="py-5 bg-danger bg-opacity-10">
+<section class="py-5" style="background: linear-gradient(135deg, #3181d1, #3181d1);">
     <div class="container">
         <div class="row text-center g-4">
             <div class="col-md-3 col-6">
-                <div class="stat-number">15+</div>
-                <div class="text-secondary">Years of experience</div>
+                <div class="stat-number display-4 fw-bold text-white">15+</div>
+                <div class="text-white-50">Années d'expérience</div>
             </div>
             <div class="col-md-3 col-6">
-                <div class="stat-number">98%</div>
-                <div class="text-secondary">Patient satisfaction</div>
+                <div class="stat-number display-4 fw-bold text-white">98%</div>
+                <div class="text-white-50">Satisfaction patient</div>
             </div>
             <div class="col-md-3 col-6">
-                <div class="stat-number">5000+</div>
-                <div class="text-secondary">Smiles transformed</div>
+                <div class="stat-number display-4 fw-bold text-white">5000+</div>
+                <div class="text-white-50">Sourires transformés</div>
             </div>
             <div class="col-md-3 col-6">
-                <div class="stat-number">17</div>
-                <div class="text-secondary">Certified experts</div>
+                <div class="stat-number display-4 fw-bold text-white">17</div>
+                <div class="text-white-50">Experts certifiés</div>
             </div>
         </div>
     </div>
 </section>
 
 <!-- Testimonials -->
-<section class="py-5">
+<section class="py-5" style="background: #f0f4ff;">
     <div class="container">
-        <h2 class="section-title">Real stories. <span>Real smiles.</span></h2>
-        <p class="section-subtitle">
-            Nothing speaks louder than the voice of those who have experienced our services firsthand.
+        <h2 class="text-center display-4 fw-light mb-3">Histoires vraies. <span style="color: #3181d1;" class="fw-bold">Sourires réels.</span></h2>
+        <p class="text-center text-secondary mb-5" style="max-width: 700px; margin: 0 auto 3rem auto;">
+            Rien n'est plus éloquent que la voix de ceux qui ont vécu nos services par eux-mêmes.
         </p>
         
         <div class="row g-4">
             <div class="col-md-4">
-                <div class="testimonial-card">
+                <div class="testimonial-card p-4 rounded-4 shadow-sm" style="background: white;">
                     <div class="d-flex align-items-center mb-3">
-                        <div class="bg-danger bg-opacity-10 rounded-circle p-2 me-3">
+                        <div class="rounded-circle p-2 me-3" style="background: #e8eeff;">
                             <span class="fs-4">⭐</span>
                         </div>
                         <div>
-                            <div class="fw-bold">Christina M.</div>
-                            <div class="text-warning">★★★★★</div>
+                            <div class="fw-bold">Christine M.</div>
+                            <div style="color: #ffc107;">★★★★★</div>
                         </div>
                     </div>
                     <p class="text-secondary fst-italic">
-                        "My smile transformed completely. The team at Celestia Smiles is truly exceptional."
+                        "Mon sourire est complètement transformé. L'équipe de Celestia Smiles est vraiment exceptionnelle."
                     </p>
-                    <div class="text-danger small mt-2">Orthodontics</div>
+                    <div class="small mt-2" style="color: #3181d1;">Orthodontie</div>
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="testimonial-card">
+                <div class="testimonial-card p-4 rounded-4 shadow-sm" style="background: white;">
                     <div class="d-flex align-items-center mb-3">
-                        <div class="bg-danger bg-opacity-10 rounded-circle p-2 me-3">
+                        <div class="rounded-circle p-2 me-3" style="background: #e8eeff;">
                             <span class="fs-4">⭐</span>
                         </div>
                         <div>
                             <div class="fw-bold">David R.</div>
-                            <div class="text-warning">★★★★★</div>
+                            <div style="color: #ffc107;">★★★★★</div>
                         </div>
                     </div>
                     <p class="text-secondary fst-italic">
-                        "Professional, caring, and artistic. The veneers they created changed my life."
+                        "Professionnel, attentionné et artistique. Les facettes qu'ils ont créées ont changé ma vie."
                     </p>
-                    <div class="text-danger small mt-2">Cosmetic Dentistry</div>
+                    <div class="small mt-2" style="color: #3181d1;">Dentisterie esthétique</div>
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="testimonial-card">
+                <div class="testimonial-card p-4 rounded-4 shadow-sm" style="background: white;">
                     <div class="d-flex align-items-center mb-3">
-                        <div class="bg-danger bg-opacity-10 rounded-circle p-2 me-3">
+                        <div class="rounded-circle p-2 me-3" style="background: #e8eeff;">
                             <span class="fs-4">⭐</span>
                         </div>
                         <div>
-                            <div class="fw-bold">Sophia L.</div>
-                            <div class="text-warning">★★★★★</div>
+                            <div class="fw-bold">Sophie L.</div>
+                            <div style="color: #ffc107;">★★★★★</div>
                         </div>
                     </div>
                     <p class="text-secondary fst-italic">
-                        "The best dental experience I've ever had. State-of-the-art technology."
+                        "La meilleure expérience dentaire que j'aie jamais eue. Une technologie de pointe."
                     </p>
-                    <div class="text-danger small mt-2">Implants</div>
+                    <div class="small mt-2" style="color: #3181d1;">Implants</div>
                 </div>
             </div>
         </div>
@@ -179,12 +193,12 @@
 </section>
 
 <!-- CTA Banner -->
-<section class="py-5 bg-danger text-white">
+<section class="py-5 text-white" style="background: linear-gradient(135deg, #3181d1 0%, #3181d1 100%);">
     <div class="container text-center">
-        <h2 class="display-4 fw-light mb-3">Celestia Smiles, <span class="fw-bold">made personal</span></h2>
-        <p class="lead mb-4">Ready for your smile transformation? Schedule a consultation with our experts.</p>
-        <a href="{{ route('appointments.create') }}" class="btn btn-light text-danger px-5 py-3 rounded-pill fw-bold">
-            Schedule a visit
+        <h2 class="display-4 fw-light mb-3">Celestia Smiles, <span class="fw-bold">personnalisé</span></h2>
+        <p class="lead mb-4">Prêt pour votre transformation de sourire ? Planifiez une consultation avec nos experts.</p>
+        <a href="{{ route('appointments.create') }}" class="btn btn-light rounded-pill px-5 py-3 fw-bold" style="color: #3181d1;">
+            Prendre rendez-vous
         </a>
     </div>
 </section>

@@ -1,44 +1,68 @@
 @extends('layouts.app')
 
-@section('title', 'Our Team - Pure Smiles')
-@section('description', 'Meet our expert dental team')
+@section('title', 'Our Specialists - Celestia Smiles')
 
 @section('content')
-<div class="py-20 bg-gradient-to-br from-blue-50 to-white">
-    <div class="max-w-7xl mx-auto px-4">
-        <div class="text-center mb-12">
-            <h1 class="text-4xl md:text-5xl font-bold mb-4">
-                Meet our <span class="text-pure-600">Experts</span>
-            </h1>
-            <p class="text-xl text-gray-600">Our team of dedicated professionals brings precision, empathy, and artistry to every treatment</p>
+<section class="py-5 bg-light">
+    <div class="container py-5">
+        <div class="text-center mb-5">
+            <h1 class="display-3 fw-light mb-3">Meet the <span class="fw-bold">Minds</span> 🧠👩‍⚕️</h1>
+            <p class="lead text-secondary">behind your smile</p>
+            <p class="text-secondary">Our team of dedicated professionals brings precision, empathy, and artistry to every treatment.</p>
         </div>
-
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <div class="row g-4">
             @forelse($doctors as $doctor)
-            <div class="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition">
-                <div class="bg-pure-100 h-48 flex items-center justify-center">
-                    @if($doctor->photo)
-                        <img src="{{ asset('storage/' . $doctor->photo) }}" alt="{{ $doctor->name }}" class="w-full h-full object-cover">
-                    @else
-                        <span class="text-6xl">👨‍⚕️</span>
-                    @endif
-                </div>
-                <div class="p-6">
-                    <h2 class="text-2xl font-bold mb-1">{{ $doctor->name }}</h2>
-                    <p class="text-pure-600 font-semibold mb-3">{{ $doctor->specialty }}</p>
-                    <p class="text-gray-600 mb-4">{{ Str::limit($doctor->bio, 120) }}</p>
-                    <div class="flex justify-between items-center text-sm">
-                        <span class="text-gray-500">🎓 {{ $doctor->experience_years }} years experience</span>
-                        <span class="text-pure-600">⭐ {{ $doctor->experience_years * 10 }}+ patients</span>
+            <div class="col-md-6 col-lg-4">
+                <div class="card border-0 shadow-sm h-100">
+                    <div class="position-relative">
+                        @if($doctor->photo)
+                            <img src="{{ asset('storage/' . $doctor->photo) }}" class="card-img-top" alt="{{ $doctor->name }}">
+                        @else
+                            <div class="bg-danger bg-opacity-10 text-center py-5">
+                                <span class="display-1">👨‍⚕️</span>
+                            </div>
+                        @endif
+                        <div class="position-absolute bottom-0 start-0 bg-danger text-white px-3 py-1 m-3 rounded-pill small">
+                            ★ {{ 4 + ($loop->index * 0.1) }}
+                        </div>
+                    </div>
+                    <div class="card-body text-center">
+                        <h3 class="h4">{{ $doctor->name }}</h3>
+                        <p class="text-danger">{{ $doctor->specialty }}</p>
+                        <p class="text-secondary">{{ Str::limit($doctor->bio, 100) }}</p>
+                        <div class="border-top pt-3 mt-3">
+                            <div class="row text-center">
+                                <div class="col-6">
+                                    <small class="text-secondary">Experience</small>
+                                    <div class="fw-bold">{{ $doctor->experience_years }} years</div>
+                                </div>
+                                <div class="col-6">
+                                    <small class="text-secondary">Patients</small>
+                                    <div class="fw-bold">{{ $doctor->experience_years * 50 }}+</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer bg-transparent border-0 text-center pb-4">
+                        <a href="{{ route('appointments.create') }}" class="btn btn-outline-danger btn-sm rounded-pill px-4">
+                            Book Consultation
+                        </a>
                     </div>
                 </div>
             </div>
             @empty
-            <div class="col-span-3 text-center py-12">
-                <p class="text-gray-500">No doctors found.</p>
+            <div class="col-12 text-center">
+                <p class="text-secondary">No specialists found. Please check back later.</p>
             </div>
             @endforelse
         </div>
+        
+        <div class="text-center mt-5">
+            <a href="{{ route('appointments.create') }}" class="btn btn-danger rounded-pill px-5 py-3">
+                Schedule a consultation →
+            </a>
+        </div>
     </div>
-</div>
+</section>
 @endsection
