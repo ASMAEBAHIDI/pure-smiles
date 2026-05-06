@@ -5,6 +5,7 @@ use App\Http\Controllers\AppointmentController;
 use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\DoctorController;
 use App\Http\Controllers\CalculatorController;
+use App\Http\Controllers\ContactController; 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -12,10 +13,13 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/services', [ServiceController::class, 'index'])->name('services');
 Route::get('/doctors', [DoctorController::class, 'index'])->name('doctors');
+Route::get('/team', [DoctorController::class, 'index'])->name('team');
 Route::get('/calculator', [CalculatorController::class, 'index'])->name('calculator');
 Route::post('/calculator/calculate', [CalculatorController::class, 'calculate'])->name('calculator.calculate');
 Route::get('/appointments/create', [AppointmentController::class, 'create'])->name('appointments.create');
 Route::post('/appointments', [AppointmentController::class, 'store'])->name('appointments.store');
+Route::get('/contact', [ContactController::class, 'index'])->name('contact'); 
+Route::post('/contact', [ContactController::class, 'store'])->name('contact.store');
 
 // Routes d'authentification (Breeze)
 Route::middleware('auth')->group(function () {
