@@ -11,9 +11,15 @@ use Illuminate\Support\Facades\Route;
 
 // Routes publiques
 Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::get('/about', function () {
+    return view('pages.about');})->name('about');
 Route::get('/services', [ServiceController::class, 'index'])->name('services');
+Route::get('/specialists', function () {
+    return view('pages.doctors');})->name('specialists');
 Route::get('/doctors', [DoctorController::class, 'index'])->name('doctors');
 Route::get('/team', [DoctorController::class, 'index'])->name('team');
+Route::get('/testimonials', function () {
+    return view('pages.testimonials');})->name('testimonials');
 Route::get('/calculator', [CalculatorController::class, 'index'])->name('calculator');
 Route::post('/calculator/calculate', [CalculatorController::class, 'calculate'])->name('calculator.calculate');
 Route::get('/appointments/create', [AppointmentController::class, 'create'])->name('appointments.create');
