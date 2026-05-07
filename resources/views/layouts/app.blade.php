@@ -12,10 +12,10 @@
 <!-- Navigation -->
 <nav class="navbar navbar-expand-lg fixed-top bg-white shadow-sm">
     <div class="container">
-        <!-- Logo + Marque -->
+
         <a class="navbar-brand d-flex align-items-center" href="{{ route('home') }}">
             <span class="fw-bold fs-3">
-                <span style="color: #3181d1;">Pure</span><span style="color: #4a5568;">Smiles</span>
+                <span style="color: #002093;">Pure</span><span style="color: #4a5568;">Smiles</span>
             </span>
         </a>
         
@@ -33,7 +33,7 @@
                 <li class="nav-item"><a class="nav-link" href="{{ route('testimonials') }}">Témoignages</a></li>
                 <li class="nav-item"><a class="nav-link" href="{{ route('contact') }}">Contact</a></li>
             </ul>
-            <a href="{{ route('appointments.create') }}" class="btn rounded-pill px-4 py-2 text-white" style="background: linear-gradient(135deg, #3181d1 0%, #3181d1 100%);">
+            <a href="{{ route('appointments.create') }}" class="btn rounded-pill px-4 py-2 text-white" style="background: linear-gradient(135deg, #002093 0%, #002093 100%);">
                 Prendre rendez-vous
             </a>
         </div>
@@ -70,16 +70,16 @@
             <div class="col-md-3 mb-4">
                 <h5 class="text-white mb-3">Contact</h5>
                 <ul class="list-unstyled text-white-50">
-                    <li>📍 123 Avenue Dentaire, Paris</li>
-                    <li>📞 +33 (0)1 23 45 67 89</li>
-                    <li>✉️ contact@puresmiles.com</li>
+                    <li>772 Avenue Dentaire, Kénitra</li>
+                    <li>+212534348080</li>
+                    <li>contact@puresmiles.com</li>
                 </ul>
             </div>
             <div class="col-md-3 mb-4">
                 <h5 class="text-white mb-3">Horaires</h5>
                 <ul class="list-unstyled text-white-50">
-                    <li>Lun-Ven: 9h - 19h</li>
-                    <li>Sam: 10h - 17h</li>
+                    <li>Lun-Ven: 9h - 18h</li>
+                    <li>Sam: 9h - 13h</li>
                     <li>Dim: Fermé</li>
                 </ul>
             </div>

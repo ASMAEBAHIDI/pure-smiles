@@ -1,14 +1,14 @@
 @extends('layouts.app')
 
-@section('title', 'Contact - Celestia Smiles')
-@section('description', 'Contactez Celestia Smiles pour vos questions dentaires')
+@section('title', 'Contact - Pure Smiles')
+@section('description', 'Contactez Pure Smiles pour vos questions dentaires')
 
 @section('content')
 <div class="bg-light py-5">
     <div class="container py-5">
         <div class="text-center mb-5">
             <h1 class="display-3 fw-light mb-3">
-                Contactez<span class="fw-bold text-danger">-nous</span>
+                Contactez<span class="fw-bold" style="color: #002093;">-nous</span>
             </h1>
             <p class="lead text-secondary">Nous sommes là pour répondre à toutes vos questions</p>
         </div>
@@ -21,43 +21,35 @@
                         <h2 class="h3 fw-bold mb-4">Nos coordonnées</h2>
                         
                         <div class="d-flex align-items-center mb-4">
-                            <div class="bg-danger bg-opacity-10 rounded-circle d-flex align-items-center justify-content-center" style="width: 50px; height: 50px;">
-                                <span class="fs-3">📍</span>
-                            </div>
+                           
                             <div class="ms-3">
-                                <h3 class="h6 fw-bold mb-1">Adresse</h3>
-                                <p class="text-secondary mb-0">123 Rue des Dents, 75001 Paris</p>
+                                <h3 class="h6 fw-bold mb-1 "> • Adresse</h3>
+                                <p class="text-secondary mb-0">772 Avenue Dentaire, Kénitra</p>
                             </div>
                         </div>
                         
                         <div class="d-flex align-items-center mb-4">
-                            <div class="bg-danger bg-opacity-10 rounded-circle d-flex align-items-center justify-content-center" style="width: 50px; height: 50px;">
-                                <span class="fs-3">📞</span>
-                            </div>
+                           
                             <div class="ms-3">
-                                <h3 class="h6 fw-bold mb-1">Téléphone</h3>
-                                <p class="text-secondary mb-0">+33 (0)1 23 45 67 89</p>
+                                <h3 class="h6 fw-bold mb-1"> • Téléphone</h3>
+                                <p class="text-secondary mb-0">+212534348080</p>
                             </div>
                         </div>
                         
                         <div class="d-flex align-items-center mb-4">
-                            <div class="bg-danger bg-opacity-10 rounded-circle d-flex align-items-center justify-content-center" style="width: 50px; height: 50px;">
-                                <span class="fs-3">✉️</span>
-                            </div>
+                            
                             <div class="ms-3">
-                                <h3 class="h6 fw-bold mb-1">Email</h3>
-                                <p class="text-secondary mb-0">contact@celestiasmiles.com</p>
+                                <h3 class="h6 fw-bold mb-1">• Email</h3>
+                                <p class="text-secondary mb-0">contact@puresmiles.com</p>
                             </div>
                         </div>
                         
                         <div class="d-flex align-items-center">
-                            <div class="bg-danger bg-opacity-10 rounded-circle d-flex align-items-center justify-content-center" style="width: 50px; height: 50px;">
-                                <span class="fs-3">🕐</span>
-                            </div>
+                           
                             <div class="ms-3">
-                                <h3 class="h6 fw-bold mb-1">Horaires</h3>
+                                <h3 class="h6 fw-bold mb-1"> • Horaires</h3>
                                 <p class="text-secondary mb-0">Lun-Ven : 9h - 18h</p>
-                                <p class="text-secondary mb-0">Sam : 10h - 16h</p>
+                                <p class="text-secondary mb-0">Sam : 9h - 13h</p>
                             </div>
                         </div>
                     </div>
@@ -100,8 +92,8 @@
                                 <textarea name="message" rows="5" required class="form-control"></textarea>
                             </div>
                             
-                            <button type="submit" class="btn btn-danger btn-lg w-100 py-3">
-                                Envoyer le message →
+                            <button type="submit" class="btn btn-lg w-100 py-3 text-white" style="background: linear-gradient(135deg, #002093 0%, #002093 100%);">
+                                Envoyer le message 
                             </button>
                         </form>
                     </div>

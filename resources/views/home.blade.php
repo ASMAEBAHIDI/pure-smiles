@@ -1,7 +1,6 @@
 @extends('layouts.app')
 
 @section('content')
-<!-- Hero Section avec image de fond -->
 <section class="hero-section position-relative" style="min-height: 100vh; display: flex; align-items: center; background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.3)), url('{{ asset("images/PURE1.png") }}'); background-size: cover; background-position: center; background-attachment: fixed;">
     <div class="container text-center text-white position-relative z-1">
         <p class="text-uppercase small fw-light tracking-wide mb-3" style="letter-spacing: 3px;">
@@ -29,9 +28,9 @@
             <div class="col-lg-6 mb-4 mb-lg-0">
                 <h2 class="display-3 fw-light text-dark">
                     Doux.<br>
-                    <span class="fw-bold" style="color: #3181d1;">Défini.</span>
+                    <span class="fw-bold" style="color: #002093;">Défini.</span>
                 </h2>
-                <div class="border-bottom my-4" style="width: 80px; height: 3px; background: #3181d1;"></div>
+                <div class="border-bottom my-4" style="width: 80px; height: 3px; background: #002093;"></div>
                 <p class="lead text-secondary">
                     Nous combinons l'ingénierie de précision avec la vision artistique pour créer des sourires à la fois 
                     naturellement beaux et structurellement parfaits.
@@ -45,7 +44,7 @@
                 <div class="position-relative">
                     <img src="https://images.unsplash.com/photo-1606811971618-4486d14f3f99?q=80&w=2070" 
                          alt="Patiente souriante" class="img-fluid rounded-4 shadow">
-                    <div class="position-absolute bottom-0 start-0 text-white p-3 rounded-4 shadow-lg m-3" style="background: #3181d1;">
+                    <div class="position-absolute bottom-0 start-0 text-white p-3 rounded-4 shadow-lg m-3" style="background: #002093;">
                         <div class="h2 fw-bold mb-0">5000+</div>
                         <small>Sourires transformés</small>
                     </div>
@@ -58,7 +57,7 @@
 <!-- Services Section -->
 <section class="py-5" style="background: white;">
     <div class="container">
-        <h2 class="text-center display-4 fw-light mb-3">Soins experts <span style="color: #3181d1;" class="fw-bold">pour chaque sourire</span></h2>
+        <h2 class="text-center display-4 fw-light mb-3">Soins experts <span style="color: #002093;" class="fw-bold">pour chaque sourire</span></h2>
         <p class="text-center text-secondary mb-5" style="max-width: 700px; margin: 0 auto 3rem auto;">
             Nous offrons un éventail complet de traitements – chacun adapté pour élever votre santé, votre confiance et votre beauté naturelle.
         </p>
@@ -66,36 +65,28 @@
         <div class="row g-4 mt-2">
             <div class="col-md-6 col-lg-3">
                 <div class="service-card text-center p-4 rounded-4 shadow-sm" style="transition: all 0.3s; background: #f8f9ff;">
-                    <div class="service-icon mb-3">
-                        <span class="display-4">🦷</span>
-                    </div>
+                
                     <h4 class="h5 fw-bold">Dentisterie esthétique</h4>
                     <p class="text-secondary small">Facettes, collage et makeovers du sourire</p>
                 </div>
             </div>
             <div class="col-md-6 col-lg-3">
                 <div class="service-card text-center p-4 rounded-4 shadow-sm" style="transition: all 0.3s; background: #f8f9ff;">
-                    <div class="service-icon mb-3">
-                        <span class="display-4">📐</span>
-                    </div>
+                  
                     <h4 class="h5 fw-bold">Orthodontie</h4>
                     <p class="text-secondary small">Bagues et aligneurs transparents</p>
                 </div>
             </div>
             <div class="col-md-6 col-lg-3">
                 <div class="service-card text-center p-4 rounded-4 shadow-sm" style="transition: all 0.3s; background: #f8f9ff;">
-                    <div class="service-icon mb-3">
-                        <span class="display-4">💎</span>
-                    </div>
+                    
                     <h4 class="h5 fw-bold">Implantologie</h4>
                     <p class="text-secondary small">Remplacement permanent des dents</p>
                 </div>
             </div>
             <div class="col-md-6 col-lg-3">
                 <div class="service-card text-center p-4 rounded-4 shadow-sm" style="transition: all 0.3s; background: #f8f9ff;">
-                    <div class="service-icon mb-3">
-                        <span class="display-4">✨</span>
-                    </div>
+                 
                     <h4 class="h5 fw-bold">Blanchiment</h4>
                     <p class="text-secondary small">Blanchiment dentaire professionnel</p>
                 </div>
@@ -131,7 +122,7 @@
 <!-- Testimonials -->
 <section class="py-5" style="background: #f0f4ff;">
     <div class="container">
-        <h2 class="text-center display-4 fw-light mb-3">Histoires vraies. <span style="color: #3181d1;" class="fw-bold">Sourires réels.</span></h2>
+        <h2 class="text-center display-4 fw-light mb-3">Histoires vraies. <span style="color: #002093;" class="fw-bold">Sourires réels.</span></h2>
         <p class="text-center text-secondary mb-5" style="max-width: 700px; margin: 0 auto 3rem auto;">
             Rien n'est plus éloquent que la voix de ceux qui ont vécu nos services par eux-mêmes.
         </p>
@@ -140,16 +131,14 @@
             <div class="col-md-4">
                 <div class="testimonial-card p-4 rounded-4 shadow-sm" style="background: white;">
                     <div class="d-flex align-items-center mb-3">
-                        <div class="rounded-circle p-2 me-3" style="background: #e8eeff;">
-                            <span class="fs-4">⭐</span>
-                        </div>
+                       
                         <div>
-                            <div class="fw-bold">Christine M.</div>
+                            <div class="fw-bold">Rihab</div>
                             <div style="color: #ffc107;">★★★★★</div>
                         </div>
                     </div>
                     <p class="text-secondary fst-italic">
-                        "Mon sourire est complètement transformé. L'équipe de Celestia Smiles est vraiment exceptionnelle."
+                        "Mon sourire est complètement transformé. L'équipe de Pure Smiles est vraiment exceptionnelle."
                     </p>
                     <div class="small mt-2" style="color: #3181d1;">Orthodontie</div>
                 </div>
@@ -157,11 +146,9 @@
             <div class="col-md-4">
                 <div class="testimonial-card p-4 rounded-4 shadow-sm" style="background: white;">
                     <div class="d-flex align-items-center mb-3">
-                        <div class="rounded-circle p-2 me-3" style="background: #e8eeff;">
-                            <span class="fs-4">⭐</span>
-                        </div>
+                        
                         <div>
-                            <div class="fw-bold">David R.</div>
+                            <div class="fw-bold">Yassine</div>
                             <div style="color: #ffc107;">★★★★★</div>
                         </div>
                     </div>
@@ -174,11 +161,9 @@
             <div class="col-md-4">
                 <div class="testimonial-card p-4 rounded-4 shadow-sm" style="background: white;">
                     <div class="d-flex align-items-center mb-3">
-                        <div class="rounded-circle p-2 me-3" style="background: #e8eeff;">
-                            <span class="fs-4">⭐</span>
-                        </div>
+                       
                         <div>
-                            <div class="fw-bold">Sophie L.</div>
+                            <div class="fw-bold">Sophia</div>
                             <div style="color: #ffc107;">★★★★★</div>
                         </div>
                     </div>
@@ -192,14 +177,5 @@
     </div>
 </section>
 
-<!-- CTA Banner -->
-<section class="py-5 text-white" style="background: linear-gradient(135deg, #3181d1 0%, #3181d1 100%);">
-    <div class="container text-center">
-        <h2 class="display-4 fw-light mb-3">Celestia Smiles, <span class="fw-bold">personnalisé</span></h2>
-        <p class="lead mb-4">Prêt pour votre transformation de sourire ? Planifiez une consultation avec nos experts.</p>
-        <a href="{{ route('appointments.create') }}" class="btn btn-light rounded-pill px-5 py-3 fw-bold" style="color: #3181d1;">
-            Prendre rendez-vous
-        </a>
-    </div>
-</section>
+
 @endsection

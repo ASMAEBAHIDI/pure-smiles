@@ -1,21 +1,21 @@
 @import 'bootstrap/dist/css/bootstrap.min.css';
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700;800&display=swap');
 
-/* Variables personnalisées */
+
 :root {
     --celestia-50: #fef3f2;
     --celestia-100: #fee2e1;
-    --celestia-500: #ef4444;
-    --celestia-600: #dc2626;
-    --celestia-700: #b91c1c;
-    --celestia-800: #991b1b;
+    --celestia-500: #3181d1;
+    --celestia-600: #002093;
+    --celestia-700: #3181d1;
+    --celestia-800: #3181d1;
     --cream: #faf8f5;
     --soft-black: #1a1a1a;
 }
 
 body {
     font-family: 'Inter', sans-serif;
-    color: #333;
+    color: #030202;
 }
 
 h1,
@@ -86,20 +86,20 @@ h3,
 }
 
 .navbar-brand span:first-child {
-    color: var(--celestia-800);
+    color: #002093;
 }
 
 .navbar-brand span:last-child {
-    color: var(--celestia-500);
+    color: #002093;
 }
 
 .nav-link {
-    color: #4a5568;
+    color: #002093;
     transition: color 0.3s;
 }
 
 .nav-link:hover {
-    color: var(--celestia-600);
+    color: #3181d1;
 }
 
 .hero-section {
@@ -160,7 +160,7 @@ h3,
     margin-bottom: 0.5rem;
 }
 
-/* Styles pour le thème Bleu Ciel */
+
 .service-card {
     transition: transform 0.3s, box-shadow 0.3s;
 }
