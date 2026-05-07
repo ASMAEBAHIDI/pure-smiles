@@ -26,6 +26,7 @@ Route::get('/appointments/create', [AppointmentController::class, 'create'])->na
 Route::post('/appointments', [AppointmentController::class, 'store'])->name('appointments.store');
 Route::get('/contact', [ContactController::class, 'index'])->name('contact'); 
 Route::post('/contact', [ContactController::class, 'store'])->name('contact.store');
+Route::get('/specialists', [App\Http\Controllers\DoctorController::class, 'index'])->name('specialists');
 
 // Routes d'authentification (Breeze)
 Route::middleware('auth')->group(function () {

@@ -1,66 +1,57 @@
 @extends('layouts.app')
 
-@section('title', 'Our Specialists - Celestia Smiles')
+@section('title', 'Nos Spécialistes - Pure Smiles')
 
 @section('content')
 <section class="py-5 bg-light">
     <div class="container py-5">
         <div class="text-center mb-5">
-            <h1 class="display-3 fw-light mb-3">Meet the <span class="fw-bold">Minds</span> 🧠👩‍⚕️</h1>
-            <p class="lead text-secondary">behind your smile</p>
-            <p class="text-secondary">Our team of dedicated professionals brings precision, empathy, and artistry to every treatment.</p>
+            <h1 class="display-3 fw-light mb-3">Rencontrez les <span class="fw-bold" style="color: #002093;">esprits</span></h1>
+            <p class="lead text-secondary" style="font-size: 1.25rem;">derrière votre sourire</p>
+            <p class="text-secondary mx-auto" style="max-width: 700px;">Notre équipe de professionnels dévoués apporte précision, empathie et artistique à chaque traitement – combinant des années d'expérience avec une passion commune pour des soins véritablement personnalisés.</p>
+
         </div>
         
         <div class="row g-4">
-            @forelse($doctors as $doctor)
-            <div class="col-md-6 col-lg-4">
-                <div class="card border-0 shadow-sm h-100">
-                    <div class="position-relative">
-                        @if($doctor->photo)
-                            <img src="{{ asset('storage/' . $doctor->photo) }}" class="card-img-top" alt="{{ $doctor->name }}">
-                        @else
-                            <div class="bg-danger bg-opacity-10 text-center py-5">
-                                <span class="display-1">👨‍⚕️</span>
-                            </div>
-                        @endif
-                        <div class="position-absolute bottom-0 start-0 bg-danger text-white px-3 py-1 m-3 rounded-pill small">
-                            ★ {{ 4 + ($loop->index * 0.1) }}
+            @foreach($doctors as $doctor)
+            <div class="col-md-6">
+                <div class="card border-0 shadow-sm h-100 rounded-4">
+                    <div class="card-body p-4">
+                        <h3 class="h4 fw-bold mb-2" style="color: #333;">{{ $doctor->name }}</h3>
+                        <p class="text-muted mb-3">{{ $doctor->description }}</p>
+                        
+                        <div class="mt-3">
+                            <p class="small fw-semibold mb-1 text-uppercase" style="color: #002093;">Estimation des coûts</p>
+                            <p class="h5 fw-bold" style="color: #002093;">{{ $doctor->cost_range }}*</p>
+                            <small class="text-muted">*Estimation uniquement. Coût final en clinique.</small>
                         </div>
-                    </div>
-                    <div class="card-body text-center">
-                        <h3 class="h4">{{ $doctor->name }}</h3>
-                        <p class="text-danger">{{ $doctor->specialty }}</p>
-                        <p class="text-secondary">{{ Str::limit($doctor->bio, 100) }}</p>
-                        <div class="border-top pt-3 mt-3">
-                            <div class="row text-center">
-                                <div class="col-6">
-                                    <small class="text-secondary">Experience</small>
-                                    <div class="fw-bold">{{ $doctor->experience_years }} years</div>
-                                </div>
-                                <div class="col-6">
-                                    <small class="text-secondary">Patients</small>
-                                    <div class="fw-bold">{{ $doctor->experience_years * 50 }}+</div>
-                                </div>
+                        
+                        <div class="mt-3">
+                            <p class="small fw-semibold mb-1 text-uppercase" style="color: #002093;">Complexité du traitement</p>
+                            <div class="d-flex justify-content-between align-items-center mb-1">
+                                <span class="small" style="font-size: 11px;">0%</span>
+                                <span class="small fw-bold" style="color: #002093; font-size: 13px;">{{ $doctor->complexity }}%</span>
+                                <span class="small" style="font-size: 11px;">100%</span>
+                            </div>
+                            <div class="progress" style="height: 8px; background: #e0e0e0;">
+                                <div class="progress-bar" style="width: {{ $doctor->complexity }}%; background: linear-gradient(90deg, #667eea, #764ba2); border-radius: 4px;"></div>
                             </div>
                         </div>
-                    </div>
-                    <div class="card-footer bg-transparent border-0 text-center pb-4">
-                        <a href="{{ route('appointments.create') }}" class="btn btn-outline-danger btn-sm rounded-pill px-4">
-                            Book Consultation
-                        </a>
+                        
+                        <div class="mt-3">
+                            <p class="small fw-semibold mb-1 text-uppercase" style="color: #002093;">Durée estimée</p>
+                            <p class="fw-bold mb-0" style="font-size: 1.1rem;">{{ $doctor->treatment_time }}</p>
+                            <small class="text-muted">Sous réserve de consultation.</small>
+                        </div>
                     </div>
                 </div>
             </div>
-            @empty
-            <div class="col-12 text-center">
-                <p class="text-secondary">No specialists found. Please check back later.</p>
-            </div>
-            @endforelse
+            @endforeach
         </div>
         
         <div class="text-center mt-5">
-            <a href="{{ route('appointments.create') }}" class="btn btn-danger rounded-pill px-5 py-3">
-                Schedule a consultation →
+            <a href="{{ route('appointments.create') }}" class="btn rounded-pill px-5 py-3 fw-bold text-white" style="background: linear-gradient(135deg, #002093 0%, #002093 100%);">
+                Planifier une consultation
             </a>
         </div>
     </div>
