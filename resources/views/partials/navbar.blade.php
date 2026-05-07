@@ -13,12 +13,12 @@
             </div>
             
             <div class="hidden md:flex space-x-8">
-                <a href="{{ route('home') }}" class="text-gray-700 hover:text-celestia-600 transition">Home</a>
-                <a href="{{ route('services') }}" class="text-gray-700 hover:text-celestia-600 transition">Services</a>
-                <a href="{{ route('specialists') }}" class="text-gray-700 hover:text-celestia-600 transition">Specialists</a>
-                <a href="{{ route('calculator') }}" class="text-gray-700 hover:text-celestia-600 transition">Calculator</a>
-                <a href="{{ route('testimonials') }}" class="text-gray-700 hover:text-celestia-600 transition">Testimonials</a>
-                <a href="{{ route('contact') }}" class="text-gray-700 hover:text-celestia-600 transition">Contact</a>
+                <a href="{{ route('home') }}" class="text-gray-700 hover:text-blue-600 transition">Home</a>
+                <a href="{{ route('services') }}" class="text-gray-700 hover:text-blue-600 transition">Services</a>
+                <a href="{{ route('specialists') }}" class="text-gray-700 hover:text-blue-600 transition">Specialists</a>
+                <a href="{{ route('calculator') }}" class="text-gray-700 hover:text-blue-600 transition">Calculator</a>
+                <a href="{{ route('testimonials') }}" class="text-gray-700 hover:text-blue-600 transition">Testimonials</a>
+                <a href="{{ route('contact') }}" class="text-gray-700 hover:text-blue-600 transition">Contact</a>
                 @auth
                     @if(auth()->user()->isAdmin())
                         <a href="{{ route('admin.dashboard') }}" class="text-celestia-600 font-semibold">Admin</a>

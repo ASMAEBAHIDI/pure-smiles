@@ -6,6 +6,22 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>Pure Smiles - @yield('title', 'Soins Dentaires de Luxe')</title>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
+    <style>
+    /* FORCER la couleur hover en bleu */
+    .nav-link:hover,
+    .navbar-nav .nav-link:hover,
+    nav a:hover,
+    .navbar a:hover,
+    [class*="nav-link"]:hover {
+        color: #2563eb !important;
+        background-color: transparent !important;
+    }
+    
+    /* Pour les liens avec classe text-gray-700 */
+    .text-gray-700:hover {
+        color: #2563eb !important;
+    }
+</style>
 </head>
 <body>
 
@@ -53,7 +69,7 @@
                 <div class="d-flex align-items-center mb-3">
                     <img src="{{ asset('images/logo-white.png') }}" alt="Celestia Smiles Logo" class="me-2" style="height: 35px; width: auto;" onerror="this.style.display='none'">
                     <h4 class="font-serif mb-0">
-                        <span style="color: #3181d1;">Pure</span><span class="text-white">Smiles</span>
+                        <span style="color: #002093;">Pure</span><span class="text-white">Smiles</span>
                     </h4>
                 </div>
                 <p class="text-white-50">Clinique orthodontique et esthétique premium créant des sourires confiants.</p>

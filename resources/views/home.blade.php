@@ -42,8 +42,11 @@
             </div>
             <div class="col-lg-6">
                 <div class="position-relative">
-                    <img src="https://images.unsplash.com/photo-1606811971618-4486d14f3f99?q=80&w=2070" 
-                         alt="Patiente souriante" class="img-fluid rounded-4 shadow">
+                 
+                    <img src="{{ asset('images/clinic2.jpg') }}" 
+                         alt="Patiente souriante" 
+                         class="img-fluid rounded-4 shadow"
+                         style="width: 100%; height: auto; object-fit: cover;">
                     <div class="position-absolute bottom-0 start-0 text-white p-3 rounded-4 shadow-lg m-3" style="background: #002093;">
                         <div class="h2 fw-bold mb-0">5000+</div>
                         <small>Sourires transformés</small>
@@ -96,7 +99,7 @@
 </section>
 
 <!-- Stats Banner -->
-<section class="py-5" style="background: linear-gradient(135deg, #3181d1, #3181d1);">
+<section class="py-5" style="background: linear-gradient(135deg, #002093, #002093);">
     <div class="container">
         <div class="row text-center g-4">
             <div class="col-md-3 col-6">
