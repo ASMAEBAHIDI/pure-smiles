@@ -1,6 +1,6 @@
-@extends('layout.app')
+@extends('layouts.app')
 
-@section('title', 'Admin Dashboard - Celestia Smiles')
+@section('title', 'Admin Dashboard - Pure Smiles')
 
 @section('content')
 <div class="pt-24 pb-20 bg-gray-50 min-h-screen">

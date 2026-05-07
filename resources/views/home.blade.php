@@ -11,7 +11,7 @@
         </h1>
         <p class="lead mb-5">Pour ceux qui ne se contentent de rien d'ordinaire.</p>
         <div class="d-flex gap-3 justify-content-center flex-wrap">
-            <a href="{{ route('appointments.create') }}" class="btn btn-light rounded-pill px-5 py-3 fw-bold" style="background: white; color: #002093; transition: all 0.3s;">
+            <a href="{{ route('appointments.create') }}" class="btn btn-light rounded-pill px-5 py-3 fw-bold" style="background: #002093; color: white; transition: all 0.3s;">
                 Prendre rendez-vous
             </a>
             <a href="{{ route('services') }}" class="btn btn-outline-light rounded-pill px-5 py-3 fw-bold" style="border: 2px solid white; transition: all 0.3s;">
