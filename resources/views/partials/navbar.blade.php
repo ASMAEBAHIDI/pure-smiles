@@ -2,11 +2,11 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between items-center h-20">
             <div class="flex items-center space-x-3">
-                <!-- Logo -->
+    
                 <a href="/" class="flex items-center">
-                    <img src="{{ asset('images/logoP.svg.png') }}" alt="Celestia Smiles Logo" class="h-10 w-auto">
+                    <img src="{{ asset('images/logoP.svg.png') }}" alt="Pure Smiles Logo" class="h-10 w-auto">
                 </a>
-                <!-- Nom de la clinique -->
+            
                 <a href="/" class="text-2xl font-serif font-bold text-celestia-800">
                     Pure<span class="text-celestia-500">Smiles</span>
                 </a>

@@ -8,10 +8,10 @@
         <h1 class="h2">Détail du rendez-vous</h1>
         <div>
             <a href="{{ route('admin.appointments.edit', $appointment) }}" class="btn btn-primary">
-                <i class="fas fa-edit me-1"></i> Modifier
+                 Modifier
             </a>
             <a href="{{ route('admin.appointments.index') }}" class="btn btn-secondary">
-                <i class="fas fa-arrow-left me-1"></i> Retour
+                 Retour
             </a>
         </div>
     </div>

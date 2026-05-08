@@ -3,18 +3,32 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Appointment extends Model
 {
-    use HasFactory;
-
     protected $fillable = [
-        'name', 'email', 'phone', 'preferred_date', 'preferred_time',
-        'service', 'message', 'status'
+        'patient_name',
+        'patient_email',
+        'patient_phone',
+        'doctor_id',
+        'service_id',
+        'appointment_date',
+        'appointment_time',
+        'status',
+        'notes'
     ];
 
     protected $casts = [
-        'preferred_date' => 'date'
+        'appointment_date' => 'date',
     ];
+
+    public function doctor()
+    {
+        return $this->belongsTo(Doctor::class);
+    }
+
+    public function service()
+    {
+        return $this->belongsTo(Service::class);
+    }
 }

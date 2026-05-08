@@ -9,7 +9,7 @@ class DatabaseSeeder extends Seeder
 {
     public function run(): void
     {
-        // Vider les tables avant de les remplir (optionnel)
+      
         DB::statement('SET FOREIGN_KEY_CHECKS=0;');
         
         DB::table('doctors')->truncate();
@@ -20,7 +20,7 @@ class DatabaseSeeder extends Seeder
         
         DB::statement('SET FOREIGN_KEY_CHECKS=1;');
         
-        // Lancer les seeders
+        
         $this->call([
             DoctorSeeder::class,
             ServiceSeeder::class,

@@ -7,7 +7,7 @@
     <div class="d-flex justify-content-between align-items-center mb-4">
         <h1 class="h2">Modifier le rendez-vous</h1>
         <a href="{{ route('admin.appointments.index') }}" class="btn btn-secondary">
-            <i class="fas fa-arrow-left me-1"></i> Retour
+             Retour
         </a>
     </div>
 

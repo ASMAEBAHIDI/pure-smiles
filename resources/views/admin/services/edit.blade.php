@@ -7,7 +7,7 @@
     <div class="d-flex justify-content-between align-items-center mb-4">
         <h1 class="h2">Modifier le service</h1>
         <a href="{{ route('admin.services.index') }}" class="btn btn-secondary">
-            <i class="fas fa-arrow-left me-1"></i> Retour
+            Retour
         </a>
     </div>
 
@@ -24,12 +24,7 @@
                         @error('name') <div class="invalid-feedback">{{ $message }}</div> @enderror
                     </div>
 
-                    <div class="col-md-6">
-                        <label class="form-label">Icône (emoji ou HTML)</label>
-                        <input type="text" name="icon" class="form-control @error('icon') is-invalid @enderror" value="{{ old('icon', $service->icon) }}" placeholder="🦷, ✨, 💎...">
-                        <small class="text-muted">Exemple : 🦷, ✨, 💎, 📐, ⭐</small>
-                        @error('icon') <div class="invalid-feedback">{{ $message }}</div> @enderror
-                    </div>
+                   
 
                     <div class="col-12">
                         <label class="form-label">Description courte *</label>

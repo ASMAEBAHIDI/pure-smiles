@@ -67,7 +67,7 @@
             </div>
         </div>
         
-        <!-- Témoignages supplémentaires -->
+        
         <div class="row g-4 mt-2">
             <!-- Témoignage 4 -->
             <div class="col-md-4">

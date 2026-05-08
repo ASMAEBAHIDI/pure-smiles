@@ -21,7 +21,7 @@
     </div>
 </section>
 
-<!-- Soft. Defined Section -->
+
 <section class="py-5" style="background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);">
     <div class="container">
         <div class="row align-items-center">
@@ -57,7 +57,7 @@
     </div>
 </section>
 
-<!-- Services Section -->
+
 <section class="py-5" style="background: white;">
     <div class="container">
         <h2 class="text-center display-4 fw-light mb-3">Soins experts <span style="color: #002093;" class="fw-bold">pour chaque sourire</span></h2>
@@ -98,7 +98,7 @@
     </div>
 </section>
 
-<!-- Stats Banner -->
+
 <section class="py-5" style="background: linear-gradient(135deg, #002093, #002093);">
     <div class="container">
         <div class="row text-center g-4">
@@ -122,7 +122,7 @@
     </div>
 </section>
 
-<!-- Testimonials -->
+
 <section class="py-5" style="background: #f0f4ff;">
     <div class="container">
         <h2 class="text-center display-4 fw-light mb-3">Histoires vraies. <span style="color: #002093;" class="fw-bold">Sourires réels.</span></h2>

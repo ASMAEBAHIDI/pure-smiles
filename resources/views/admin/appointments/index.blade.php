@@ -6,11 +6,7 @@
 <div class="container py-4">
     <div class="d-flex justify-content-between align-items-center mb-4">
         <h1 class="h2">Gestion des Rendez-vous</h1>
-        <div>
-            <a href="{{ route('admin.appointments.create') }}" class="btn btn-primary">
-                <i class="fas fa-plus me-1"></i> Nouveau rendez-vous
-            </a>
-        </div>
+        
     </div>
 
     @if(session('success'))

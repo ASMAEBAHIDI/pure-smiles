@@ -29,8 +29,11 @@ class AppointmentController extends Controller
             'notes' => 'nullable|string'
         ]);
 
+        // Ajouter le statut par défaut
+        $validated['status'] = 'pending';
+
         Appointment::create($validated);
 
-        return redirect()->route('home')->with('success', 'Appointment booked successfully! We will contact you soon.');
+        return redirect()->route('home')->with('success', 'Rendez-vous pris avec succès ! Nous vous contacterons bientôt.');
     }
 }

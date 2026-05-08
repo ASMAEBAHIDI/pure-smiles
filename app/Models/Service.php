@@ -11,10 +11,16 @@ class Service extends Model
 
     protected $fillable = [
         'name', 'slug', 'description', 'long_description',
-        'icon', 'image', 'is_active', 'order'
+         'image', 'is_active', 'order'
     ];
 
     protected $casts = [
         'is_active' => 'boolean'
     ];
+    
+    public function appointments()
+    {
+        return $this->hasMany(Appointment::class);
+    }
 }
+

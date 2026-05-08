@@ -6,7 +6,7 @@
 <div class="container py-5">
     <div class="row">
         <div class="col-12">
-            <!-- En-tête -->
+        
             <div class="d-flex justify-content-between align-items-center mb-4">
                 <div>
                     <h1 class="display-5 fw-bold mb-2">
@@ -15,12 +15,10 @@
                     </h1>
                     <p class="text-muted">Bienvenue dans votre espace d'administration</p>
                 </div>
-                <div class="text-end">
-                    <span class="badge bg-primary p-2">Administrateur</span>
-                </div>
+                
             </div>
 
-            <!-- Statistiques -->
+    
             <div class="row g-4 mb-5">
                 <div class="col-md-3">
                     <div class="card border-0 shadow-sm rounded-4">
@@ -84,7 +82,7 @@
                 </div>
             </div>
 
-            <!-- Navigation rapide -->
+            
             <div class="row g-4 mb-5">
                 <div class="col-12">
                     <h3 class="h4 mb-4">Gestion rapide</h3>
@@ -127,7 +125,7 @@
                 </div>
             </div>
 
-            <!-- Derniers rendez-vous -->
+    
             <div class="card border-0 shadow-sm rounded-4">
                 <div class="card-header bg-white py-3 rounded-top-4">
                     <h3 class="h5 mb-0">Derniers rendez-vous</h3>

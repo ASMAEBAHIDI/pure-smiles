@@ -7,7 +7,7 @@
     <div class="d-flex justify-content-between align-items-center mb-4">
         <h1 class="h2">Gestion des Témoignages</h1>
         <a href="{{ route('admin.testimonials.create') }}" class="btn btn-primary">
-            <i class="fas fa-plus me-1"></i> Ajouter un témoignage
+             Ajouter un témoignage
         </a>
     </div>
 

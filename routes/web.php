@@ -42,7 +42,7 @@ Route::middleware('auth')->group(function () {
 // Inclure les routes d'authentification de Breeze
 require __DIR__.'/auth.php';
 
-// Routes admin (protégées par auth et admin)
+// Routes admin 
 Route::middleware(['auth', 'admin'])->prefix('admin')->name('admin.')->group(function () {
     Route::get('/', [App\Http\Controllers\Admin\DashboardController::class, 'index'])->name('dashboard');
     Route::resource('doctors', App\Http\Controllers\Admin\DoctorController::class);

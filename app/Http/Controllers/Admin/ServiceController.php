@@ -26,7 +26,6 @@ class ServiceController extends Controller
             'name' => 'required|string|max:255',
             'description' => 'required|string',
             'long_description' => 'nullable|string',
-            'icon' => 'nullable|string|max:50',
             'price_min' => 'nullable|numeric|min:0',
             'price_max' => 'nullable|numeric|min:0',
             'duration_minutes' => 'nullable|integer|min:0',

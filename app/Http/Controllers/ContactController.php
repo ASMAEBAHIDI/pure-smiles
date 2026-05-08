@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Appointment;
+use App\Models\Contact;
 use Illuminate\Http\Request;
 
 class ContactController extends Controller
@@ -21,17 +21,13 @@ class ContactController extends Controller
             'message' => 'required|string',
         ]);
 
-        // CORRECTION : Ajouter toutes les données requises
-        Appointment::create([
-            'patient_name' => $validated['name'],
-            'patient_email' => $validated['email'],
-            'patient_phone' => $validated['phone'],
-            'notes' => $validated['message'],
-            'appointment_date' => now()->addDays(7)->format('Y-m-d'),
-            'appointment_time' => '10:00:00',
-            'doctor_id' => 1,
-            'service_id' => 1,
-            'status' => 'pending'
+        // Sauvegarder dans la table contacts (pas appointments)
+        Contact::create([
+            'name' => $validated['name'],
+            'email' => $validated['email'],
+            'phone' => $validated['phone'],
+            'message' => $validated['message'],
+            'is_read' => false
         ]);
 
         return redirect()->back()->with('success', 'Message envoyé avec succès ! Nous vous contacterons bientôt.');

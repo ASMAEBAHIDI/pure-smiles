@@ -7,7 +7,7 @@
     <title>Pure Smiles - @yield('title', 'Soins Dentaires de Luxe')</title>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     <style>
-    /* FORCER la couleur hover en bleu */
+    
     .nav-link:hover,
     .navbar-nav .nav-link:hover,
     nav a:hover,
@@ -17,7 +17,7 @@
         background-color: transparent !important;
     }
     
-    /* Pour les liens avec classe text-gray-700 */
+   
     .text-gray-700:hover {
         color: #2563eb !important;
     }
@@ -25,7 +25,7 @@
 </head>
 <body>
 
-<!-- Navigation -->
+
 <nav class="navbar navbar-expand-lg fixed-top bg-white shadow-sm">
     <div class="container">
 
@@ -56,12 +56,12 @@
     </div>
 </nav>
 
-<!-- Main Content -->
+
 <main style="margin-top: 76px;">
     @yield('content')
 </main>
 
-<!-- Footer -->
+
 <footer class="text-white py-5 mt-5" style="background: #1a1a2e;">
     <div class="container">
         <div class="row">

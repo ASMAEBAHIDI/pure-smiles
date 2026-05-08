@@ -7,7 +7,7 @@
     <div class="d-flex justify-content-between align-items-center mb-4">
         <h1 class="h2">Modifier le témoignage</h1>
         <a href="{{ route('admin.testimonials.index') }}" class="btn btn-secondary">
-            <i class="fas fa-arrow-left me-1"></i> Retour
+             Retour
         </a>
     </div>
 

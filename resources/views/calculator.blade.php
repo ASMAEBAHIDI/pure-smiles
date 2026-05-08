@@ -5,7 +5,7 @@
 @section('content')
 <section style="background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); padding: 120px 0 80px 0;">
     <div class="container">
-        <!-- En-tête -->
+
         <div class="text-center mb-5">
             <small class="text-uppercase fw-bold" style="color: #3181d1; letter-spacing: 3px;">Dentisterie • Santé</small>
             <h1 class="display-3 fw-light mb-2 mt-3" style="color: #002093;">CALCULATEUR DE TRAITEMENT</h1>
@@ -14,12 +14,12 @@
         </div>
         
         <div class="row g-5">
-            <!-- Colonne de gauche - Formulaire -->
+          
             <div class="col-lg-6">
                 <div class="card border-0 shadow-lg rounded-4" style="background: white;">
                     <div class="card-body p-4 p-lg-5">
                         
-                        <!-- 01. Select goals -->
+                        
                         <div class="mb-4">
                             <h3 class="fw-bold mb-3" style="color: #002093;">01. Sélectionnez vos objectifs</h3>
                             <div class="form-check mb-2">
@@ -48,7 +48,7 @@
                             </div>
                         </div>
                         
-                        <!-- 02. Preferred method -->
+                       
                         <div class="mb-4">
                             <h3 class="fw-bold mb-3" style="color: #002093;">02. Méthode préférée</h3>
                             <div class="form-check mb-2">
@@ -71,7 +71,7 @@
                             </div>
                         </div>
                         
-                        <!-- 03. Loyalty program -->
+                     
                         <div class="mb-4">
                             <h3 class="fw-bold mb-3" style="color: #002093;">03. Programme de fidélité</h3>
                             <div class="form-check mb-2">
@@ -99,7 +99,7 @@
                                     </div>
                                 </div>
                                 
-                                <!-- Numéros des dents -->
+                          
                                 <div class="d-flex justify-content-center gap-2 mt-3 flex-wrap">
                                     <button class="btn btn-sm rounded-circle tooth-btn" data-tooth="1" style="width: 40px; height: 40px; background: #667eea20; color: #3181d1;">1</button>
                                     <button class="btn btn-sm rounded-circle tooth-btn" data-tooth="2" style="width: 40px; height: 40px; background: #667eea20; color: #3181d1;">2</button>
@@ -117,13 +117,13 @@
                 </div>
             </div>
             
-            <!-- Colonne de droite - Résultats DYNAMIQUES -->
+         
             <div class="col-lg-6">
                 <div class="card border-0 shadow-lg rounded-4 text-white" style="background: linear-gradient(135deg, #002093 0%, #002093 100%);">
                     <div class="card-body p-4 p-lg-5">
                         <h2 class="display-5 fw-bold mb-4">Résultat</h2>
                         
-                        <!-- Treatment complexity -->
+                   
                         <div class="mb-4">
                             <h4 class="fw-semibold mb-3">Complexité du traitement</h4>
                             <div class="d-flex justify-content-between mb-2">
@@ -135,7 +135,7 @@
                             </div>
                         </div>
                         
-                        <!-- Treatment time -->
+                      
                         <div class="mb-4">
                             <h4 class="fw-semibold mb-3">Durée estimée</h4>
                             <div class="d-flex justify-content-between mb-2">
@@ -144,7 +144,7 @@
                             </div>
                         </div>
                         
-                        <!-- Estimated cost -->
+                       
                         <div class="mb-4">
                             <h4 class="fw-semibold mb-3">Coût estimé</h4>
                             <div class="d-flex justify-content-between">
@@ -153,7 +153,7 @@
                             </div>
                         </div>
                         
-                        <!-- Recommended specialists -->
+                      
                         <div class="mb-4">
                             <h4 class="fw-semibold mb-3">Spécialistes recommandés</h4>
                             <ul class="list-unstyled" id="specialists-list">
@@ -163,7 +163,7 @@
                             </ul>
                         </div>
                         
-                        <!-- Recommended plan -->
+                       
                         <div class="mb-4">
                             <h4 class="fw-semibold mb-3">Plan recommandé</h4>
                             <ul class="list-unstyled" id="plan-list">
@@ -174,7 +174,7 @@
                             </ul>
                         </div>
                         
-                        <!-- Boutons -->
+                    
                         <div class="d-flex gap-3 mt-4">
                             <a href="{{ route('appointments.create') }}" class="btn btn-light rounded-pill px-4 py-2 fw-bold" style="color: #002093;">
                                 Prendre rendez-vous
@@ -194,7 +194,7 @@
 @push('scripts')
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-    // Éléments du formulaire
+  
     const goalStraight = document.getElementById('goal_straight');
     const goalMissing = document.getElementById('goal_missing');
     const goalWhitening = document.getElementById('goal_whitening');
@@ -205,7 +205,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const loyaltyMember = document.getElementById('loyalty_member');
     const loyaltyNot = document.getElementById('loyalty_not');
     
-    // Éléments d'affichage
+   
     const complexityValue = document.getElementById('complexity-value');
     const complexityBar = document.getElementById('complexity-bar');
     const durationValue = document.getElementById('duration-value');
@@ -214,7 +214,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const planList = document.getElementById('plan-list');
     const selectedToothText = document.getElementById('selected-tooth-text');
     
-    // Sélection de dent
+    
     let selectedTooth = null;
     const toothBtns = document.querySelectorAll('.tooth-btn');
     toothBtns.forEach(btn => {
@@ -231,31 +231,31 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // Mise à jour du calculateur
+  
     function updateCalculator() {
-        // Récupérer la méthode sélectionnée
+       
         let method = 'aligners';
         if (methodVeneers.checked) method = 'veneers';
         if (methodImplants.checked) method = 'implants';
         
-        // Récupérer les objectifs
+       
         let goalsCount = 0;
         if (goalStraight.checked) goalsCount++;
         if (goalMissing.checked) goalsCount++;
         if (goalWhitening.checked) goalsCount++;
         if (goalMakeover.checked) goalsCount++;
         
-        // Récupérer le programme de fidélité
+        
         let isMember = loyaltyMember.checked;
         
-        // Calculer la complexité
+       
         let complexity = 40;
         if (method === 'veneers') complexity = 65;
         if (method === 'implants') complexity = 85;
         complexity += goalsCount * 5;
         if (complexity > 100) complexity = 100;
         
-        // Calculer la durée
+        
         let duration = '2 semaines';
         let durationMinutes = 60;
         if (method === 'veneers') {
@@ -267,7 +267,7 @@ document.addEventListener('DOMContentLoaded', function() {
             durationMinutes = 120;
         }
         
-        // Calculer le coût
+      
         let minPrice = 2400;
         let maxPrice = 4900;
         if (method === 'veneers') {
@@ -279,31 +279,31 @@ document.addEventListener('DOMContentLoaded', function() {
             maxPrice = 45000;
         }
         
-        // Appliquer la réduction membre
+       
         if (isMember) {
             minPrice = Math.floor(minPrice * 0.9);
             maxPrice = Math.floor(maxPrice * 0.9);
         }
         
-        // Ajuster le coût selon les objectifs
+        
         if (goalMakeover.checked) {
             minPrice = Math.floor(minPrice * 1.3);
             maxPrice = Math.floor(maxPrice * 1.3);
         }
         
-        // Ajuster selon la dent sélectionnée
+        
         if (selectedTooth && selectedTooth >= 6) {
             minPrice = Math.floor(minPrice * 1.2);
             maxPrice = Math.floor(maxPrice * 1.2);
         }
         
-        // Mettre à jour l'affichage
+       
         complexityValue.textContent = complexity + '%';
         complexityBar.style.width = complexity + '%';
         durationValue.textContent = duration;
         costValue.textContent = minPrice.toLocaleString() + ' - ' + maxPrice.toLocaleString() + ' DH';
         
-        // Mettre à jour les spécialistes recommandés
+        
         let specialists = '';
         let plan = '';
         
@@ -349,13 +349,13 @@ document.addEventListener('DOMContentLoaded', function() {
         planList.innerHTML = plan;
     }
     
-    // Ajouter les écouteurs d'événements
+    
     const inputs = [goalStraight, goalMissing, goalWhitening, goalMakeover, methodAligners, methodVeneers, methodImplants, loyaltyMember, loyaltyNot];
     inputs.forEach(input => {
         if (input) input.addEventListener('change', updateCalculator);
     });
     
-    // Initialiser
+  
     updateCalculator();
 });
 </script>

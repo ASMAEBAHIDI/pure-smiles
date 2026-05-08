@@ -7,7 +7,7 @@
     <div class="d-flex justify-content-between align-items-center mb-4">
         <h1 class="h2">Gestion des Services</h1>
         <a href="{{ route('admin.services.create') }}" class="btn btn-primary">
-            <i class="fas fa-plus me-1"></i> Ajouter un service
+            Ajouter un service
         </a>
     </div>
 
@@ -24,7 +24,7 @@
                 <table class="table table-hover mb-0">
                     <thead class="table-light">
                         <tr>
-                            <th>Icône</th>
+                            <th>-</th>
                             <th>Nom</th>
                             <th>Description</th>
                             <th>Prix</th>
@@ -37,13 +37,7 @@
                     <tbody>
                         @forelse($services as $service)
                         <tr>
-                            <td>
-                                @if($service->icon)
-                                    <span class="fs-4">{{ $service->icon }}</span>
-                                @else
-                                    <i class="fas fa-tooth text-secondary"></i>
-                                @endif
-                            </td>
+                            <td>-</td>
                             <td><strong>{{ $service->name }}</strong></td>
                             <td>{{ Str::limit($service->description, 50) }}</td>
                             <td>

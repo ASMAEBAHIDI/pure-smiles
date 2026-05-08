@@ -82,7 +82,7 @@
             </div>
         </div>
         
-        <!-- Deuxième ligne pour plus de spécialistes -->
+       
         <div class="row g-4 mt-2">
           
             <div class="col-md-6">

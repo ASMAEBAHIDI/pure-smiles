@@ -8,7 +8,7 @@ class DoctorController extends Controller
 {
     public function index()
     {
-        // Données statiques des spécialistes
+        
         $doctors = [
             (object) [
                 'name' => 'Dr. Ahmed',
@@ -44,7 +44,7 @@ class DoctorController extends Controller
             ],
         ];
         
-        // Retourner la vue avec les données
+      
         return view('pages.doctors')->with('doctors', $doctors);
     }
 }
