@@ -21,16 +21,16 @@ class ContactController extends Controller
             'message' => 'required|string',
         ]);
 
-       
+        // CORRECTION : Ajouter toutes les données requises
         Appointment::create([
             'patient_name' => $validated['name'],
             'patient_email' => $validated['email'],
             'patient_phone' => $validated['phone'],
             'notes' => $validated['message'],
-            'appointment_date' => now()->addDays(7), // Date par défaut
-            'appointment_time' => '10:00:00', // Heure par défaut
-            'doctor_id' => 1, // Docteur par défaut
-            'service_id' => 1, // Service par défaut
+            'appointment_date' => now()->addDays(7)->format('Y-m-d'),
+            'appointment_time' => '10:00:00',
+            'doctor_id' => 1,
+            'service_id' => 1,
             'status' => 'pending'
         ]);
 
