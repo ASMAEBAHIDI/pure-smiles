@@ -21,7 +21,7 @@ class ContactController extends Controller
             'message' => 'required|string',
         ]);
 
-        // Sauvegarder dans la table contacts (pas appointments)
+        // Sauvegarder dans la table contacts 
         Contact::create([
             'name' => $validated['name'],
             'email' => $validated['email'],
