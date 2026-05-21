@@ -129,7 +129,7 @@
                 <div class="text-center mt-4">
                     <p class="text-muted small">
                         <i class="bi bi-shield-check"></i> Vos informations sont confidentielles<br>
-                        Un email de confirmation vous sera envoyé après validation
+                       
                     </p>
                 </div>
             </div>
