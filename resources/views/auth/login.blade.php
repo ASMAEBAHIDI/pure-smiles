@@ -9,7 +9,7 @@
             <div class="col-lg-6">
                 <div class="text-center mb-4">
                    
-                    <h1 class="display-4 fw-light mb-2">Bienvenue<span class="fw-bold" style="color: #002093;"> Pure Smiles</span></h1>
+                    <h1 class="display-4 fw-light mb-2">Bienvenue,<span class="fw-bold" style="color: #002093;"> Pure Smiles</span></h1>
                     <p class="lead text-secondary">Connectez-vous à votre espace administration</p>
                 </div>
 

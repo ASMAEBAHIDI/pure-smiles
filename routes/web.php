@@ -30,8 +30,8 @@ Route::get('/specialists', [App\Http\Controllers\DoctorController::class, 'index
 
 // Routes d'authentification (Breeze)
 Route::middleware('auth')->group(function () {
-    Route::get('/dashboard', function () {
-        return view('dashboard');
+    Route::get('/admin/dashboard', function () {
+        return view('/admin/dashboard');
     })->name('dashboard');
     
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
