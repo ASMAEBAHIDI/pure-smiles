@@ -4,7 +4,7 @@
             <div class="flex items-center space-x-3">
     
                 <a href="/" class="flex items-center">
-                    <img src="{{ asset('images/logoP.svg.png') }}" alt="Pure Smiles Logo" class="h-10 w-auto">
+                    <img src="{{ asset('images/LOGO3.png') }}" alt="Pure Smiles Logo" class="h-10 w-auto">
                 </a>
             
                 <a href="/" class="text-2xl font-serif font-bold text-celestia-800">
