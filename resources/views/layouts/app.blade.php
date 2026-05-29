@@ -30,11 +30,7 @@
     <div class="container">
 
         <a class="navbar-brand d-flex align-items-center" href="{{ route('home') }}">
-             <img src="{{ asset('images/LOGO4.png') }}" 
-                 alt="Pure Smiles Logo" 
-                 class="me-2" 
-                 style="height: 40px; width: auto;" 
-                 onerror="this.style.display='none'">
+             
             <span class="fw-bold fs-3">
                 <span style="color: #002093;">Pure</span><span style="color: #4a5568;">Smiles</span>
             </span>
@@ -72,7 +68,7 @@
         <div class="row">
             <div class="col-md-4 mb-4">
                 <div class="d-flex align-items-center mb-3">
-                    <img src="{{ asset('images/LOGO3.png') }}" alt="Celestia Smiles Logo" class="me-2" style="height: 35px; width: auto;" onerror="this.style.display='none'">
+                    
                     <h4 class="font-serif mb-0">
                         <span style="color: #002093;">Pure</span><span class="text-white">Smiles</span>
                     </h4>
