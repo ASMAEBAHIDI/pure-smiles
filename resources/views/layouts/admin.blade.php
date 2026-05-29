@@ -8,7 +8,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-    
+        /* Variables pour les thèmes */
         [data-theme="light"] {
             --bg-body: #f0f2f5;
             --bg-card: #ffffff;
@@ -19,6 +19,7 @@
             --sidebar-text: #94a3b8;
             --topbar-bg: #ffffff;
             --shadow: rgba(0,0,0,0.05);
+            --card-hover: #f8fafc;
         }
 
         [data-theme="dark"] {
@@ -31,6 +32,7 @@
             --sidebar-text: #64748b;
             --topbar-bg: #1e293b;
             --shadow: rgba(0,0,0,0.2);
+            --card-hover: #334155;
         }
 
         body {
@@ -90,10 +92,31 @@
             transition: all 0.3s;
         }
 
+        /* Cartes */
         .card, .stat-card {
             background: var(--bg-card);
             border: 1px solid var(--border-color);
             transition: all 0.3s;
+        }
+
+        .stat-card {
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px var(--shadow);
+        }
+
+        .quick-card {
+            cursor: pointer;
+            transition: all 0.3s;
+            background: var(--bg-card);
+        }
+
+        .quick-card:hover {
+            transform: translateY(-5px);
+            background: var(--card-hover);
         }
 
         .text-muted {
@@ -113,7 +136,7 @@
             border-color: var(--border-color);
         }
 
-    
+        /* Thème toggle */
         .theme-toggle {
             background: var(--bg-body);
             border: 1px solid var(--border-color);
@@ -126,6 +149,14 @@
 
         .theme-toggle:hover {
             transform: scale(1.05);
+        }
+
+        /* Logo dans sidebar */
+        .sidebar-logo {
+            width: 60px;
+            height: 60px;
+            object-fit: contain;
+            margin-bottom: 10px;
         }
 
         @media (max-width: 768px) {
@@ -143,10 +174,11 @@
 </head>
 <body>
 
+    <!-- Sidebar Admin -->
     <div class="admin-sidebar" id="adminSidebar">
         <div class="p-4">
             <div class="text-center mb-4">
-                
+               
                 <h4 class="text-white mt-2">Pure Smiles</h4>
                 <p class="text-secondary small">Administration</p>
             </div>
@@ -183,7 +215,7 @@
         </div>
     </div>
 
-    
+    <!-- Contenu principal -->
     <div class="admin-content">
         <div class="admin-topbar d-flex justify-content-between align-items-center">
             <div>
@@ -193,7 +225,6 @@
                 <span class="ms-2">Bonjour, <strong>{{ auth()->user()->name }}</strong></span>
             </div>
             <div class="d-flex align-items-center gap-3">
-                
                 <button class="theme-toggle" id="themeToggle">
                     <i class="fas fa-sun me-1" id="themeIcon"></i>
                     <span id="themeText">Clair</span>
@@ -202,6 +233,7 @@
             </div>
         </div>
 
+        <!-- Messages flash -->
         @if(session('success'))
             <div class="alert alert-success alert-dismissible fade show" role="alert">
                 <i class="fas fa-check-circle me-2"></i> {{ session('success') }}
@@ -221,16 +253,15 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-        
+        // Toggle Sidebar
         document.getElementById('toggleSidebar')?.addEventListener('click', function() {
             document.getElementById('adminSidebar').classList.toggle('show');
         });
 
-        
+        // Dark/Light Mode
         const themeToggle = document.getElementById('themeToggle');
         const themeIcon = document.getElementById('themeIcon');
         const themeText = document.getElementById('themeText');
-        
 
         const savedTheme = localStorage.getItem('adminTheme') || 'light';
         document.documentElement.setAttribute('data-theme', savedTheme);
