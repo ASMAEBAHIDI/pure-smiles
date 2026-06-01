@@ -1,0 +1,71 @@
+<svg width="100%" viewBox="0 0 680 340" role="img" xmlns="http://www.w3.org/2000/svg">
+<title style="fill:rgb(0, 0, 0);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto">Pure Smiles logo</title>
+<desc style="fill:rgb(0, 0, 0);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto">Pure Smiles logo with a glowing blue tooth on the left and the brand name on the right. Tagline: Healthy Smiles, Pure Confidence.</desc>
+
+<defs>
+  <!-- Tooth gradient: deep blue at root, bright sky-blue at crown, white highlight -->
+  <linearGradient id="toothBody" x1="0.3" y1="0" x2="0.8" y2="1">
+    <stop offset="0%" stop-color="#B8E4FF"/>
+    <stop offset="35%" stop-color="#5EC8F8"/>
+    <stop offset="75%" stop-color="#1E90DD"/>
+    <stop offset="100%" stop-color="#0F5FA8"/>
+  </linearGradient>
+  <!-- Main highlight blob (upper-left sparkle) -->
+  <radialGradient id="highlightA" cx="38%" cy="22%" r="38%">
+    <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.90"/>
+    <stop offset="60%" stop-color="#C8EEFF" stop-opacity="0.35"/>
+    <stop offset="100%" stop-color="#5EC8F8" stop-opacity="0"/>
+  </radialGradient>
+  <!-- Secondary sheen lower-right -->
+  <radialGradient id="highlightB" cx="72%" cy="68%" r="38%">
+    <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.50"/>
+    <stop offset="100%" stop-color="#5EC8F8" stop-opacity="0"/>
+  </radialGradient>
+  <!-- Shadow under tooth -->
+  <radialGradient id="shadow" cx="50%" cy="50%" r="50%">
+    <stop offset="0%" stop-color="#A0CFEB" stop-opacity="0.40"/>
+    <stop offset="100%" stop-color="#A0CFEB" stop-opacity="0"/>
+  </radialGradient>
+</defs>
+
+<!-- ── Soft drop shadow ellipse ── -->
+<ellipse cx="178" cy="305" rx="92" ry="14" fill="url(#shadow)" style="stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+
+<!-- ── TOOTH SHAPE ──
+     A realistic molar-ish tooth profile:
+     broad crown top with slight curves, two root prongs at bottom.
+     All path coordinates in the safe zone x=50..300.
+-->
+<path d="&#10;  M 108 80&#10;  C 108 58, 128 48, 148 50&#10;  C 162 52, 170 58, 178 56&#10;  C 186 58, 194 52, 208 50&#10;  C 228 48, 248 58, 248 80&#10;  C 252 100, 246 118, 244 135&#10;  C 240 155, 238 172, 238 190&#10;  C 237 210, 234 228, 228 246&#10;  C 224 258, 216 268, 210 275&#10;  C 206 279, 202 280, 200 278&#10;  C 196 274, 194 262, 193 248&#10;  C 192 238, 190 228, 185 222&#10;  C 181 218, 175 218, 171 222&#10;  C 166 228, 164 238, 163 248&#10;  C 162 262, 160 274, 156 278&#10;  C 154 280, 150 279, 146 275&#10;  C 140 268, 132 258, 128 246&#10;  C 122 228, 119 210, 118 190&#10;  C 118 172, 116 155, 112 135&#10;  C 110 118, 104 100, 108 80&#10;  Z&#10;" fill="url(#toothBody)" stroke="#7AC8F0" stroke-width="1.2" style="stroke:rgb(122, 200, 240);color:rgb(0, 0, 0);stroke-width:1.2px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+
+<!-- Main highlight overlay -->
+<path d="&#10;  M 108 80&#10;  C 108 58, 128 48, 148 50&#10;  C 162 52, 170 58, 178 56&#10;  C 186 58, 194 52, 208 50&#10;  C 228 48, 248 58, 248 80&#10;  C 252 100, 246 118, 244 135&#10;  C 240 155, 238 172, 238 190&#10;  C 237 210, 234 228, 228 246&#10;  C 224 258, 216 268, 210 275&#10;  C 206 279, 202 280, 200 278&#10;  C 196 274, 194 262, 193 248&#10;  C 192 238, 190 228, 185 222&#10;  C 181 218, 175 218, 171 222&#10;  C 166 228, 164 238, 163 248&#10;  C 162 262, 160 274, 156 278&#10;  C 154 280, 150 279, 146 275&#10;  C 140 268, 132 258, 128 246&#10;  C 122 228, 119 210, 118 190&#10;  C 118 172, 116 155, 112 135&#10;  C 110 118, 104 100, 108 80&#10;  Z&#10;" fill="url(#highlightA)" style="stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+
+<!-- Secondary sheen -->
+<path d="&#10;  M 108 80&#10;  C 108 58, 128 48, 148 50&#10;  C 162 52, 170 58, 178 56&#10;  C 186 58, 194 52, 208 50&#10;  C 228 48, 248 58, 248 80&#10;  C 252 100, 246 118, 244 135&#10;  C 240 155, 238 172, 238 190&#10;  C 237 210, 234 228, 228 246&#10;  C 224 258, 216 268, 210 275&#10;  C 206 279, 202 280, 200 278&#10;  C 196 274, 194 262, 193 248&#10;  C 192 238, 190 228, 185 222&#10;  C 181 218, 175 218, 171 222&#10;  C 166 228, 164 238, 163 248&#10;  C 162 262, 160 274, 156 278&#10;  C 154 280, 150 279, 146 275&#10;  C 140 268, 132 258, 128 246&#10;  C 122 228, 119 210, 118 190&#10;  C 118 172, 116 155, 112 135&#10;  C 110 118, 104 100, 108 80&#10;  Z&#10;" fill="url(#highlightB)" style="stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+
+<!-- ── Sparkle star (upper-left of crown) ── -->
+<!-- Long cross -->
+<line x1="138" y1="64" x2="138" y2="82" stroke="white" stroke-width="2.5" stroke-linecap="round" opacity="0.95" style="fill:rgb(0, 0, 0);stroke:rgb(255, 255, 255);color:rgb(0, 0, 0);stroke-width:2.5px;stroke-linecap:round;stroke-linejoin:miter;opacity:0.95;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+<line x1="129" y1="73" x2="147" y2="73" stroke="white" stroke-width="2.5" stroke-linecap="round" opacity="0.95" style="fill:rgb(0, 0, 0);stroke:rgb(255, 255, 255);color:rgb(0, 0, 0);stroke-width:2.5px;stroke-linecap:round;stroke-linejoin:miter;opacity:0.95;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+<!-- Diagonal cross (thinner) -->
+<line x1="131" y1="66" x2="145" y2="80" stroke="white" stroke-width="1.2" stroke-linecap="round" opacity="0.70" style="fill:rgb(0, 0, 0);stroke:rgb(255, 255, 255);color:rgb(0, 0, 0);stroke-width:1.2px;stroke-linecap:round;stroke-linejoin:miter;opacity:0.7;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+<line x1="145" y1="66" x2="131" y2="80" stroke="white" stroke-width="1.2" stroke-linecap="round" opacity="0.70" style="fill:rgb(0, 0, 0);stroke:rgb(255, 255, 255);color:rgb(0, 0, 0);stroke-width:1.2px;stroke-linecap:round;stroke-linejoin:miter;opacity:0.7;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+<!-- tiny center dot -->
+<circle cx="138" cy="73" r="2" fill="white" opacity="0.95" style="fill:rgb(255, 255, 255);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:0.95;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+
+<!-- small secondary sparkle fleck upper-right -->
+<line x1="224" y1="62" x2="224" y2="70" stroke="white" stroke-width="1.4" stroke-linecap="round" opacity="0.70" style="fill:rgb(0, 0, 0);stroke:rgb(255, 255, 255);color:rgb(0, 0, 0);stroke-width:1.4px;stroke-linecap:round;stroke-linejoin:miter;opacity:0.7;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+<line x1="220" y1="66" x2="228" y2="66" stroke="white" stroke-width="1.4" stroke-linecap="round" opacity="0.70" style="fill:rgb(0, 0, 0);stroke:rgb(255, 255, 255);color:rgb(0, 0, 0);stroke-width:1.4px;stroke-linecap:round;stroke-linejoin:miter;opacity:0.7;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+
+<!-- ── LOGOTYPE ─────────────────────────────────────── -->
+<!-- "Pure" — regular weight, large -->
+<text x="302" y="148" font-family="Georgia, 'Times New Roman', serif" font-size="96" font-weight="400" fill="#1565C0" letter-spacing="-1" style="fill:rgb(21, 101, 192);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:Georgia, &quot;Times New Roman&quot;, serif;font-size:96px;font-weight:400;text-anchor:start;dominant-baseline:auto">Pure</text>
+
+<!-- "Smiles" — bolder, slightly larger, one shade lighter blue -->
+<text x="302" y="242" font-family="Georgia, 'Times New Roman', serif" font-size="96" font-weight="700" fill="#1976D2" letter-spacing="-1" style="fill:rgb(25, 118, 210);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:Georgia, &quot;Times New Roman&quot;, serif;font-size:96px;font-weight:700;text-anchor:start;dominant-baseline:auto">Smiles</text>
+
+<!-- ── Tagline ── -->
+<text x="308" y="278" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400" fill="#1E90DD" letter-spacing="3" style="fill:rgb(30, 144, 221);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:Arial, Helvetica, sans-serif;font-size:17px;font-weight:400;text-anchor:start;dominant-baseline:auto">HEALTHY SMILES, PURE CONFIDENCE</text>
+
+</svg>

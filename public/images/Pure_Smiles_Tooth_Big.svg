@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800">
+  <g transform="translate(40,20) scale(1.15)">
+    <!-- Blue swoosh -->
+    <path d="M170 120
+             C60 180 40 420 150 610
+             C250 770 520 760 650 560"
+          fill="none" stroke="#2D6CFF" stroke-width="28" stroke-linecap="round"/>
+
+    <!-- Tooth -->
+    <path d="M220 110
+             C140 110 110 180 125 270
+             C140 380 185 500 225 620
+             C240 665 285 670 300 615
+             C325 520 330 420 360 420
+             C390 420 395 520 420 615
+             C435 670 480 665 495 620
+             C535 500 580 380 595 270
+             C610 180 580 110 500 110
+             C450 110 420 140 360 140
+             C300 140 270 110 220 110 Z"
+          fill="#FFFFFF"/>
+
+    <!-- Smile -->
+    <path d="M180 300
+             C260 365 430 365 560 290"
+          fill="none" stroke="#2D6CFF" stroke-width="12" stroke-linecap="round"/>
+    <path d="M190 305
+             C255 350 330 370 420 360"
+          fill="none" stroke="#2D6CFF" stroke-width="6" stroke-linecap="round"/>
+  </g>
+</svg>

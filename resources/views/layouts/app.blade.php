@@ -30,6 +30,11 @@
     <div class="container">
 
         <a class="navbar-brand d-flex align-items-center" href="{{ route('home') }}">
+            <img src="{{ asset('images/Pure_Smiles_logo_svg.svg') }}" 
+                 alt="Pure Smiles Logo" 
+                 class="me-2" 
+                 style="height: 40px; width: auto;" 
+                 onerror="this.style.display='none'">
              
             <span class="fw-bold fs-3">
                 <span style="color: #002093;">Pure</span><span style="color: #4a5568;">Smiles</span>
