@@ -30,7 +30,7 @@
     <div class="container">
 
         <a class="navbar-brand d-flex align-items-center" href="{{ route('home') }}">
-             
+        
             <span class="fw-bold fs-3">
                 <span style="color: #002093;">Pure</span><span style="color: #4a5568;">Smiles</span>
             </span>
